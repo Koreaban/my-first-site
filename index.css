@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Додаємо для вирівнювання по вертикалі */
+    width: 100%; /* Займає всю ширину */
+    height: 60vh; /* Займає всю висоту екрану */
+}
+
+.cols {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Центрує картки по горизонталі */
+    align-items: center; /* Центрує картки по вертикалі */
+    gap: 100px;
+    width: 100%;
+}
+
+
+.card {
+    width: 250px;
+    height: 250px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back { /* Додано крапку перед card-back */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+}
+
+.card-front {
+    background: url(174854.png) center/cover;
+}
+.card-front1 {
+    background: url(css.png) center/cover;
+}
+
+.card-back {
+    background: #ff6619;
+    transform: rotateY(180deg);
+}
+.card-front1, .card-back1 { /* Додано крапку перед card-back */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+}
+.card-back1 {
+    background: #73baf8;
+    transform: rotateY(180deg);
+}
+
+h1 {
+    text-align: center;
+    font-size: 45px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #73baf8;
+    padding: 20px;
+    border: 5px solid white;
+    border-radius: 25px;
+}
+
+.links {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.links a {
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+}
+
+.image img {
+    border: 5px solid skyblue;
+    border-radius: 25px;
+}
+
+.video {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+.video a {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    border: 5px solid skyblue;
+    border-radius: 15px;
+}
+
+.send1 {
+    display: flex;
+    gap: 7px;
+    font-size: 25px;
+}
+
+button {
+    width: 5%;
+}
+input {
+    width: 15%;
+    padding: 7px;
+}
+
+strong {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
